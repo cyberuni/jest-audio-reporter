@@ -1,56 +1,55 @@
 {
   "name": "jest-audio-reporter",
-  "version": "0.0.0-development",
+  "version": "2.2.3",
   "description": "Plays audio on jest events",
   "keywords": [
     "jest",
     "reporters",
     "sounds"
   ],
-  "homepage": "https://github.com/unional/jest-audio-reporter",
+  "homepage": "https://github.com/cyberuni/jest-audio-reporter",
   "bugs": {
-    "url": "https://github.com/unional/jest-audio-reporter/issues"
+    "url": "https://github.com/cyberuni/jest-audio-reporter/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unional/jest-audio-reporter.git"
+    "url": "https://github.com/cyberuni/jest-audio-reporter.git"
   },
   "license": "MIT",
   "main": "cjs/index.js",
   "typings": "cjs/index.d.ts",
   "files": [
     "cjs",
-    "ts"
+    "ts",
+    "!ts/**/*.spec.ts"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.base.json",
     "clean": "rimraf cjs dist",
     "coverage": "jest --coverage",
+    "cs": "changeset",
     "depscheck": "run-p dependency-check:unused dependency-check:missing",
     "dependency-check": "run-p dependency-check:unused dependency-check:missing",
     "dependency-check:unused": "dependency-check . --unused --no-dev -i @jest/reporters -i @jest/test-result -i @jest/types",
     "dependency-check:missing": "dependency-check . --missing --no-dev",
     "lint": "eslint --ext=ts,js .",
-    "release": "npx semantic-release",
+    "release": "changeset publish",
     "size-limit": "echo no size-limit",
     "test": "jest",
     "verify": "run-p verify:build lint coverage",
     "verify:build": "npm-run-all clean build --parallel dependency-check size-limit",
+    "version": "changeset version",
     "watch": "jest --watch"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "dependencies": {
     "@jest/reporters": "^29.0.0",
-    "@jest/test-result": "^27.4.6",
+    "@jest/test-result": "^29.0.0",
     "@jest/types": "^29.0.0",
     "play-sound": "^1.1.5",
     "rc": "^1.2.8"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.0",
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
     "@types/jest": "^29.0.0",
@@ -59,7 +58,7 @@
     "eslint": "^8.0.0",
     "eslint-plugin-harmony": "^6.0.0",
     "husky": "^9.0.0",
-    "jest": "^27.4.7",
+    "jest": "^29.0.0",
     "jest-junit": "^16.0.0",
     "jest-progress-tracker": "^3.0.0",
     "jest-validate": "^29.0.0",
@@ -72,5 +71,6 @@
     "satisfier": "^5.1.0",
     "ts-jest": "^29.0.0",
     "typescript": "^5.0.0"
-  }
+  },
+  "packageManager": "pnpm@11.20.0"
 }
