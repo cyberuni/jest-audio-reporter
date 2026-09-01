@@ -30,3 +30,9 @@ minimumReleaseAgeExclude:
 allowBuilds:
   '@parcel/watcher': false
   unrs-resolver: false
+
+# Moved out of `.npmrc`, where npm warned "Unknown project config" on both. These match
+# pnpm's current defaults; they are stated explicitly so a future default change is a
+# deliberate decision rather than a silent one.
+autoInstallPeers: true
+strictPeerDependencies: false
