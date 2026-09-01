@@ -1,0 +1,13 @@
+# Supply-chain soak. These settings MUST live here rather than in `.npmrc`: pnpm only
+# auto-enables strict enforcement when the setting arrives from `pnpm-workspace.yaml`,
+# `config.yaml`, the CLI or the environment. A `minimumreleaseage` in `.npmrc` runs LOOSE
+# while looking configured (and npm warns it is not a valid npmrc key).
+#
+# `minimumReleaseAgeStrict` is the important half. pnpm 11's DEFAULT mode is loose: when
+# it meets a package younger than the window it does not fail — it silently appends that
+# package to `minimumReleaseAgeExclude` and carries on. Under that default the soak
+# enforces nothing and the exclusion list grows on its own. Strict mode turns a too-young
+# package into ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION instead, so every entry in an
+# exclusion list has to be a deliberate, reviewed pin.
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true

@@ -50,3 +50,6 @@ dist
 dist-es5
 dist-es2015
 esm
+
+# transient publish-gate output, never a tracked artifact
+publish-gate-report.md
