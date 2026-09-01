@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Fetch Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
 
       # `gh pr merge --auto` alone arms a SQUASH merge, which this repo disallows
       # (`allow_squash_merge: false`) — the call then fails and the PR sits open looking
