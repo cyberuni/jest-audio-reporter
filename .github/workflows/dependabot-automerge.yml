@@ -14,11 +14,15 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@v2
 
+      # `gh pr merge --auto` alone arms a SQUASH merge, which this repo disallows
+      # (`allow_squash_merge: false`) — the call then fails and the PR sits open looking
+      # like an idle bot. `--merge` is the only method enabled here, so it must be
+      # explicit.
       - name: Auto-merge patch and minor updates
         if: |
           steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
           steps.metadata.outputs.update-type == 'version-update:semver-minor'
-        run: gh pr merge --auto --squash "$PR_URL"
+        run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
