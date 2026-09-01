@@ -1,18 +1,10 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "tsconfig.*.json"
-      ],
-      "url": "http://json.schemastore.org/tsconfig"
-    }
-  ],
-  "cSpell.words": [
-    "afplay",
-    "devel",
-    "mplayer",
-    "reporterrc",
-    "roso"
-  ]
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"json.schemas": [
+		{
+			"fileMatch": ["tsconfig.*.json"],
+			"url": "http://json.schemastore.org/tsconfig"
+		}
+	],
+	"cSpell.words": ["afplay", "devel", "mplayer", "reporterrc", "roso"]
 }

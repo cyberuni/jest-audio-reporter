@@ -1,0 +1,22 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.11/schema.json",
+	"extends": ["@repobuddy/biome/recommended"],
+	"files": {
+		"includes": [
+			"!**/.pnpm-store",
+			"!**/audio",
+			"!**/cjs",
+			"!**/coverage",
+			"!**/dist",
+			"!**/esm",
+			"!**/node_modules",
+			"!pnpm-lock.yaml",
+			"!skills-lock.json"
+		]
+	},
+	"javascript": {
+		"formatter": {
+			"trailingCommas": "none"
+		}
+	}
+}

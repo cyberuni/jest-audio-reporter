@@ -11,3 +11,22 @@
 # exclusion list has to be a deliberate, reviewed pin.
 minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  # This package's own upstreams and their transitives, all republished on 2026-09-01 by
+  # the same modernization sweep and all verified to carry npm provenance
+  # (`dist.attestations.provenance.predicateType = https://slsa.dev/provenance/v1`).
+  # Pinned to exact versions so the soak keeps governing every later release of each —
+  # the check evaluates per resolved version, including transitive ones, which is why
+  # iso-error / path-equal / tersify / unpartial appear here without being direct
+  # dependencies. Remove these once they age past the 24h window.
+  - assertron@11.5.4
+  - iso-error@6.0.5
+  - path-equal@1.2.7
+  - satisfier@5.4.4
+  - tersify@4.0.6
+  - unpartial@1.0.7
+# Both arrive transitively via `depcheck` and both ship prebuilt platform binaries as
+# optional dependencies, so neither needs its postinstall to run.
+allowBuilds:
+  '@parcel/watcher': false
+  unrs-resolver: false
