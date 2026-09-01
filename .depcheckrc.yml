@@ -1,0 +1,12 @@
+# Packages depcheck cannot see a require/import for. Each is reached through a config
+# file or a script bin rather than source, so absence from `ts/` is expected.
+ignores:
+  # invoked by .husky/commit-msg, configured by commitlint.config.cjs
+  - '@commitlint/cli'
+  - '@commitlint/config-conventional'
+  # extended by biome.json
+  - '@repobuddy/biome'
+  # ambient jest globals for the specs
+  - '@types/jest'
+  # bin, used by the `clean` script
+  - rimraf

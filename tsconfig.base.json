@@ -1,23 +1,22 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "esModuleInterop": true,
-    "lib": [
-      "es2015"
-    ],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "newLine": "LF",
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "outDir": "cjs",
-    "removeComments": false,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "target": "es2015"
-  },
-  "files": [
-    "ts/index.ts"
-  ]
+	"compilerOptions": {
+		"declaration": true,
+		"esModuleInterop": true,
+		// An explicit `lib` REPLACES the default set, so it has to be kept in step with
+		// `target` by hand — `es2015` alone was withholding AggregateError, Error.cause and
+		// everything else added since.
+		"lib": ["es2022"],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"newLine": "LF",
+		"noImplicitAny": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"outDir": "cjs",
+		"removeComments": false,
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"target": "es2022"
+	},
+	"files": ["ts/index.ts"]
 }
