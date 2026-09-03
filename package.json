@@ -7,13 +7,13 @@
 		"reporters",
 		"sounds"
 	],
-	"homepage": "https://github.com/cyberuni/jest-audio-reporter",
+	"homepage": "https://github.com/repobuddy/jest-audio-reporter",
 	"bugs": {
-		"url": "https://github.com/cyberuni/jest-audio-reporter/issues"
+		"url": "https://github.com/repobuddy/jest-audio-reporter/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cyberuni/jest-audio-reporter.git"
+		"url": "https://github.com/repobuddy/jest-audio-reporter.git"
 	},
 	"license": "MIT",
 	"main": "cjs/index.js",
