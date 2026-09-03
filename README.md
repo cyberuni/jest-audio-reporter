@@ -76,14 +76,14 @@ The audio files used for testing in this repository comes from <https://dova-s.j
 
 Please refer to them for copyright information.
 
-[codecov-image]: https://codecov.io/gh/cyberuni/jest-audio-reporter/branch/main/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/cyberuni/jest-audio-reporter
-[coveralls-image]: https://coveralls.io/repos/github/cyberuni/jest-audio-reporter/badge.svg
-[coveralls-url]: https://coveralls.io/github/cyberuni/jest-audio-reporter
+[codecov-image]: https://codecov.io/gh/repobuddy/jest-audio-reporter/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/repobuddy/jest-audio-reporter
+[coveralls-image]: https://coveralls.io/repos/github/repobuddy/jest-audio-reporter/badge.svg
+[coveralls-url]: https://coveralls.io/github/repobuddy/jest-audio-reporter
 [downloads-image]: https://img.shields.io/npm/dm/jest-audio-reporter.svg?style=flat
 [downloads-url]: https://npmjs.org/package/jest-audio-reporter
-[github-nodejs]: https://github.com/cyberuni/jest-audio-reporter/actions/workflows/release.yml/badge.svg
-[github-action-url]: https://github.com/cyberuni/jest-audio-reporter/actions/workflows/release.yml
+[github-nodejs]: https://github.com/repobuddy/jest-audio-reporter/actions/workflows/release.yml/badge.svg
+[github-action-url]: https://github.com/repobuddy/jest-audio-reporter/actions/workflows/release.yml
 [npm-image]: https://img.shields.io/npm/v/jest-audio-reporter.svg?style=flat
 [npm-url]: https://npmjs.org/package/jest-audio-reporter
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
